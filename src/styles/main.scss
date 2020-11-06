@@ -1,0 +1,57 @@
+/* Font */
+$font: 'Roboto', sans-serif;
+
+/* Size */
+$desktopWidth: 1140px;
+$mainFontSize: 16px;
+$mainFontWeight: 300;
+$mainLineHeight: 1.4;
+
+/* Breakpoints */
+$screen-xl: 1200px;
+$screen-lg: 992px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 320px;
+
+/* Colors */
+$default-color: #ffffff;
+$primary-color: #000000;
+
+/* Default style */
+*,
+*:before,
+*:after {    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: $font;
+    font-size: $mainFontSize;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    
+}
+
+.container {
+    margin: 0 auto;
+    width: $desktopWidth;    
+}
+
+/* Blocks style */
+@import 'blocks/*.scss';
