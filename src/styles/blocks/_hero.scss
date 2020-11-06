@@ -1,0 +1,38 @@
+.hero {    
+    background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);    
+}
+.hero-content {
+    padding: 6.75rem 0 11.875rem;
+    background-image: url('img/illustration.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    &__title {
+        margin-bottom: 2rem;
+        max-width: 31.5rem;
+        font-weight: 300;
+        font-size: 4rem;
+        color: $text-color;
+        line-height: 4.625rem;
+    }
+    &__description {
+        margin-bottom: 4.4375rem;
+        max-width: 26.5625rem;
+        font-weight: 400;
+        font-size: 1rem;
+        color: $text-color;
+        opacity: 0.6;
+        line-height: 1.625rem;
+    }
+    &__link {
+        // margin-bottom: ;
+        padding: 0.9375rem 3.125rem;
+        display: inline-block;
+        font-weight: 400;
+        font-size: 1rem;
+        color: $default-color;
+        line-height: 1.625rem;
+        background-color: $btn-color;
+        border-radius: 0.625rem;
+        box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    }    
+}
