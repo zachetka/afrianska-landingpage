@@ -1,0 +1,10 @@
+.what-we-do {
+    padding: 4rem 0;
+    &__title {
+        margin-bottom: 4rem;
+    }
+    &__services {
+        display: flex;
+        justify-content: space-between;
+    }
+}

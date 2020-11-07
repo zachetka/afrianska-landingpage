@@ -1,0 +1,39 @@
+.card {
+    padding: 0 2rem 2.75rem;
+    max-width: 22.5rem;
+    border-radius: 0.635rem;
+    background-color: $default-color;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    &__image {
+        margin: 0.875rem 0 2.75rem;
+        display: flex;
+        justify-content: center;
+
+    }
+    &__title {
+        margin-bottom: 0.875rem;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        color: $primary-color;
+    }
+    &__description {
+        margin-bottom: 1.75rem;
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.875rem;
+        color: $light-color;
+        &:after {
+            content: '';
+            display: inline-block;
+            background-image: url('img/arrow.png');
+            background-size: cover;
+            height: 1.25rem;
+            width: 1.25rem;
+            margin-left: 1rem;  
+            vertical-align: middle;
+        }    
+    }
+}

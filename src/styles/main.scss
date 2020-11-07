@@ -17,8 +17,8 @@ $screen-xs: 320px;
 /* Colors */
 $default-color: #ffffff;
 $dark-color: #000000;
-$btn-color: #5A98D0;
-$text-color: #1F3F68;
+$light-color: #5A98D0;
+$primary-color: #1F3F68;
 
 /* Default style */
 *,
@@ -33,6 +33,8 @@ $text-color: #1F3F68;
 body {
     font-family: $font;
     font-size: $mainFontSize;
+    font-weight: 400;
+    
 }
 
 a {
