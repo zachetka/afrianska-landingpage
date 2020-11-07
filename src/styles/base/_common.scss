@@ -1,0 +1,36 @@
+/* Default style */
+*,
+*:before,
+*:after {    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: $font;
+    font-size: $mainFontSize;
+    font-weight: 400;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    
+}
+
+.container {
+    margin: 0 auto;
+    width: $desktopWidth;    
+}

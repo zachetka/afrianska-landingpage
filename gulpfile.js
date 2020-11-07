@@ -13,7 +13,7 @@ const htmlmin = require('gulp-htmlmin'); // минификация html
 const sass = require('gulp-sass'); // компиляция sass в css
 sass.compiler = require('node-sass'); // указание в качестве компилятора sass-файлов NodeJS
 const sassGlob = require('gulp-sass-glob'); // глобальный импорт sass-файлов
-const postcss = require('gulp-postcss'); 
+const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer'); // проставление префиксов
 const cssnano = require('cssnano'); // минификация css
 const groupmedia = require('gulp-group-css-media-queries'); // группировка медиазапросов
@@ -34,24 +34,24 @@ const path = {
         html: 'dist/',
         css: 'dist/',
         js: 'dist/',
-        img: 'dist/img/',
-        font: 'dist/fonts'
+        img: 'dist/images/',
+        font: 'dist/fonts',
     },
     src: {
         html: 'src/views/*.html',
         css: 'src/styles/main.scss',
         js: 'src/scripts/*.js',
-        svg: 'src/icons/**/*.svg',
+        svg: 'src/svg/**/*.svg',
         img: 'src/images/**/*.{jpg,png,svg,gif,ico}',
-        font: 'src/fonts/**/*.{woff,woff2}'
+        font: 'src/fonts/**/*.{ttf,woff,woff2}',
     },
     watch: {
         html: 'src/**/*.html',
         css: 'src/styles/**/*.scss',
         js: 'src/scripts/**/*.js',
-        svg: 'src/icons/**/*.svg',
+        svg: 'src/svg/**/*.svg',
         img: 'src/images/**/*.{jpg,png,svg,gif,ico}',
-        font: 'src/fonts/**/*.{woff,woff2}'
+        font: 'src/fonts/**/*.{woff,woff2}',
     },
     styleLibs: [],
     scriptLibs: [],
@@ -90,10 +90,15 @@ exports.clean = clean;
 function html() {
     return src(path.src.html)
         .pipe(fileInclude({ prefix: '@@' }))
-        .pipe(htmlmin({
-            removeComments: true,
-            collapseWhitespace: true
-          }))
+        .pipe(
+            gulpif(
+                env === 'prod',
+                htmlmin({
+                    removeComments: true,
+                    collapseWhitespace: true,
+                })
+            )
+        )
         .pipe(dest(path.build.html));
 }
 exports.html = html;

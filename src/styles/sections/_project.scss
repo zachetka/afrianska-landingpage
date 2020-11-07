@@ -1,0 +1,40 @@
+.project {
+    padding: 0 0 7rem;
+    &__title {
+        margin-bottom: 2rem;
+    }
+    &__description {
+        margin: 0 auto 4rem;
+        max-width: 60%;
+        text-align: center;
+        color: $dark-color;
+        opacity: 1;
+    }
+    &__installation {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+    &__apps {
+        display: flex;
+    }
+    &__item {
+        flex-grow: 1;
+        position: relative;
+        &--margin {
+            margin-right: 2rem;
+        }
+    }
+    &__subtitle {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.4375rem;
+        color: $default-color;
+        &--left {
+            top: 2rem;
+            left: 2rem;
+        }
+    }
+}
