@@ -1,2 +1,2 @@
 # automation_tool
-Site with two pages
+Макет: https://www.figma.com/file/ltF4yy4T5Ok1shJGlNiO8C/afrianska-landingpage?node-id=0%3A1
