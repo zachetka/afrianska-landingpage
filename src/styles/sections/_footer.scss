@@ -1,3 +1,41 @@
 .footer {
+    padding: 5.625rem 0 4rem;
     background: $footer-bg;
+    &__top {
+        margin-bottom: 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+             
+    }
+    &__title {
+        margin-bottom: 2rem;
+        max-width: 19rem;
+        text-align: left;
+        color: $default-color;
+    }
+    &__description {
+        max-width: 30rem;
+        
+    }
+    &__line {
+        margin-bottom: 4rem;
+        border: 0;
+        height: 1px;
+        background: $default-color;
+        opacity: 0.4;
+    }
+    &__bottom {
+
+    }
+    &__list {
+
+    }&__item {
+        color: $default-color;
+        opacity: 1;
+    }
+    &__copy {
+        color: $default-color;
+        opacity: 0.4; 
+    }
 }

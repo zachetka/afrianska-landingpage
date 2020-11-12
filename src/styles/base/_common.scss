@@ -11,8 +11,8 @@
 body {
     font-family: $font;
     font-size: $mainFontSize;
-    font-weight: 400;
-    
+    font-weight: 400;    
+    letter-spacing: 0.05em;
 }
 
 a {
@@ -26,11 +26,16 @@ li {
 
 img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     
+}
+
+button {
+    border: none;
+    cursor: pointer;
 }
 
 .container {
     margin: 0 auto;
-    width: $desktopWidth;    
+    max-width: $desktopWidth;    
 }

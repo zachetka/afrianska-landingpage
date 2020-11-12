@@ -1,0 +1,12 @@
+.btn {
+    padding: 0.9375rem 5rem;
+    display: inline-block;
+    background-color: $light-color;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    color: $default-color;    
+    &--oval {
+        border-radius: 0.625rem;
+        box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    }
+}

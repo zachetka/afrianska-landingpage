@@ -5,7 +5,7 @@
     }
     &__description {
         margin: 0 auto 4rem;
-        max-width: 60%;
+        max-width: 65%;
         text-align: center;
         color: $dark-color;
         opacity: 1;
@@ -32,9 +32,10 @@
         font-size: 2rem;
         line-height: 1.4375rem;
         color: $default-color;
-        &--left {
+        &--mini {
             top: 2rem;
             left: 2rem;
+            font-size: 1.75rem;
         }
     }
 }
