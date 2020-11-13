@@ -38,4 +38,10 @@ button {
 .container {
     margin: 0 auto;
     max-width: $desktopWidth;    
+    @include xl {
+        padding: 0 32px;
+    }
+    @include sm {
+        padding: 0 16px;
+    }
 }

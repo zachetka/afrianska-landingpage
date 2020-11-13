@@ -7,6 +7,7 @@ const del = require('del'); // удаление файлов и папок
 const concat = require('gulp-concat'); // объединение файлов
 const fileInclude = require('gulp-file-include'); // подключение файлов друг в друга
 const sourcemaps = require('gulp-sourcemaps'); // создание исходных карт
+const pxtorem = require('postcss-pxtorem'); // перевод px в rem
 
 const htmlmin = require('gulp-htmlmin'); // минификация html
 
@@ -113,9 +114,24 @@ function css() {
         .pipe(gulpif(env === 'prod', groupmedia()))
         .pipe(
             gulpif(
+                env === 'dev',
+                postcss([
+                    pxtorem({
+                        // replace: false,
+                        minPixelValue: 2,
+                    }),
+                ])
+            )
+        )
+        .pipe(
+            gulpif(
                 env === 'prod',
                 postcss([
                     autoprefixer({ overrideBrowserslist: 'last 2 versions' }),
+                    pxtorem({
+                        // replace: false,
+                        minPixelValue: 2,
+                    }),
                     cssnano({
                         zindex: false,
                         discardComments: { removeAll: true },

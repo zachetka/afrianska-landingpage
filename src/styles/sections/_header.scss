@@ -1,6 +1,9 @@
 .header {
-    margin-top: 2.125rem;  
+    margin-top: 40px;  
     display: flex;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
+    @include sm {
+        margin-top: 16px;  
+    }
 }
